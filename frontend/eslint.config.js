@@ -36,7 +36,15 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-      "react/prop-types": "off", // Desativa validação de props
+      "react/prop-types": "off",
+      "no-unused-vars": [
+        "warn", // Trocar "error" por "warn" para reduzir a severidade
+        {
+          vars: "all", // Aplica-se a todas as variáveis
+          varsIgnorePattern: "^_", // Ignora variáveis iniciadas com "_"
+          args: "none", // Não exige que argumentos sejam usados
+        },
+      ],
     },
   },
 ];
